@@ -1,0 +1,2 @@
+Main    DEBUG   _CONSOLE
+Main    WARN    _FILE:/tmp/warnings.log

@@ -50,8 +50,8 @@ Examples:
 
 ```
 my.package.MyClass		DEBUG,WARN		_CONSOLE
-MyClass					WARN			_CONSOLE
-mypackage.*				WARN,DEBUG		_FILE:/tmp/logs.txt
+MyClass				WARN			_CONSOLE
+mypackage.*			WARN,DEBUG		_FILE:/tmp/logs.txt
 my.package.*			DEBUG			_FILE:/tmp/logs
 ```
 

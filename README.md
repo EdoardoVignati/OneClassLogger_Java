@@ -4,7 +4,7 @@ An easy, complete and ready-to-use Java logger
 ## How to use
 
 - Copy the ```OneClassLogger.java``` file in your Java source folder
-- Create a ```log.properties``` file (optional)
+- Create a ```log.options``` file (optional)
 - Checkout  ```Main.java``` for some examples (optional)
 
 ## Features

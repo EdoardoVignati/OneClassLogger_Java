@@ -23,7 +23,7 @@ If you don't specify the path to this file, the logger will print on the standar
 
 You can specify the path in two ways:
 
-- in the source code during the declaration on the logger
+- in the source code during the declaration of the logger
 - as a JVM option with the ```-Dlog=/path/to/log.options``` flag 
 
 The file has a very simple format. Each row determines a new logging rule.

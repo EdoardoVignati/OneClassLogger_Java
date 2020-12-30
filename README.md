@@ -13,6 +13,8 @@ An easy, complete and ready-to-use Java logger
 - No third party dependencies are required
 - Fully customizable
 - It works with jar packages
+- Different levels of logging
+- Logs on stdout or file
 - Easy to use...very easy
 
 ## The options file

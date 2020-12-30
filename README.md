@@ -10,7 +10,7 @@ An easy, complete and ready-to-use Java logger
 ## Features
 
 - It's a self-contained one-class logger
-- No third party dependencies are required
+- No third party dependencies required
 - Fully customizable
 - It works with jar packages
 - Different levels of logging

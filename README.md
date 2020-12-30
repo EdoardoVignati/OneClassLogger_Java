@@ -65,7 +65,7 @@ Please note that there is no order between levels unlike the log4j approach.
 
 ## Enjoy
 
-Logging should be easy task but at the same time powerful time saving.
+OneClassLogger aspires to be easy to use, lightweight and powerful.
 
 Feel free to contribute.
 

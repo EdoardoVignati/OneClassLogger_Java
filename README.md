@@ -23,7 +23,9 @@ The file should be named ```log.options``` and it's not strictly required.
 
 If you don't specify the path to this file, the logger will print on the standard output.
 
-You can specify the path in two ways:
+The options are compiled the first time when the OneClassLogger is built and are used till the end of the process.
+
+You can specify the options file path in two ways:
 
 - in the source code during the declaration of the logger
 - as a JVM option with the ```-Dlog=/path/to/log.options``` flag 

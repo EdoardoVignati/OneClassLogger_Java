@@ -60,7 +60,6 @@ public class OneClassLogger {
     private void log(LEVEL level, String message) {
         StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
         int lineNumber = stackTrace[3].getLineNumber();
-
         boolean logged = false;
 
         String out = now() + " [" + level + "] " + clazz.getName() + ":" + lineNumber + " - " + message;
@@ -68,7 +67,7 @@ public class OneClassLogger {
         for (OneClassLoggerOption t : options) {
             if (clazz.getName().matches(t.getMatcher()) && t.getLevel().equals(level.toString())) {
                 if (t.getAppender().equals(APPENDER._CONSOLE.toString())) {
-                    System.out.println(now() + " [" + level + "] " + clazz.getName() + " - " + message);
+                    System.out.println(out);
                     logged = true;
                 }
                 if (t.getAppender().split(":")[0].equals(APPENDER._FILE.toString())) {

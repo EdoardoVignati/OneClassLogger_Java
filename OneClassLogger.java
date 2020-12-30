@@ -59,7 +59,7 @@ public class OneClassLogger {
 
     private void log(LEVEL level, String message) {
         StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-        int lineNumber = stackTrace[stackTrace.length - 1].getLineNumber();
+        int lineNumber = stackTrace[3].getLineNumber();
 
         boolean logged = false;
 

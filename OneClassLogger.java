@@ -1,3 +1,5 @@
+package tools;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -56,7 +58,12 @@ public class OneClassLogger {
     }
 
     private void log(LEVEL level, String message) {
+        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+        int lineNumber = stackTrace[stackTrace.length - 1].getLineNumber();
+
         boolean logged = false;
+
+        String out = now() + " [" + level + "] " + clazz.getName() + ":" + lineNumber + " - " + message;
 
         for (OneClassLoggerOption t : options) {
             if (clazz.getName().matches(t.getMatcher()) && t.getLevel().equals(level.toString())) {
@@ -75,7 +82,7 @@ public class OneClassLogger {
                         BufferedWriter writer = new BufferedWriter(
                                 new FileWriter(f.getAbsolutePath(), true));
 
-                        writer.write(now() + " [" + level + "] " + clazz.getName() + " - " + message + "\n");
+                        writer.write(out + "\n");
                         writer.close();
                         logged = true;
                     } catch (IOException e) {
@@ -88,7 +95,7 @@ public class OneClassLogger {
 
         // Select console by default
         if (!logged) {
-            System.out.println(now() + " [" + level + "] " + clazz.getName() + " - " + message);
+            System.out.println(out);
             return;
         }
     }

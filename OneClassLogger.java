@@ -42,10 +42,10 @@ public class OneClassLogger {
     }
 
     // With options file
-    public OneClassLogger(String optionsPath, Class clazz) {
+    public OneClassLogger(Class clazz, String optionsFilePath) {
         this.clazz = clazz;
+        this.optionsPath = optionsFilePath;
         this.levels = new ArrayList<>(Arrays.asList(LEVEL.values()));
-        this.optionsPath = optionsPath;
         this.options = load();
     }
 

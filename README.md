@@ -42,8 +42,10 @@ Each element is separated by a space/tab or combinations of them.
 
 You can choose from the following levels: 
 
+- INFO
 - DEBUG
 - WARN
+- ERROR
 
 You can choose from the following appenders:
 

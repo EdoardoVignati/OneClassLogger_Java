@@ -29,8 +29,10 @@ public class OneClassLogger {
 
     // Add here a new custom level
     private enum LEVEL {
+        INFO,
         DEBUG,
         WARN,
+        ERROR,
     }
 
     // With or without options file from argument -Dlog
@@ -49,12 +51,20 @@ public class OneClassLogger {
         this.options = load();
     }
 
+   public void info(String message) {
+        log(LEVEL.INFO, message);
+    }
+
     public void debug(String message) {
         log(LEVEL.DEBUG, message);
     }
 
     public void warn(String message) {
         log(LEVEL.WARN, message);
+    }
+
+    public void error(String message) {
+        log(LEVEL.ERROR, message);
     }
 
     private void log(LEVEL level, String message) {

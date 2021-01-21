@@ -51,20 +51,20 @@ public class OneClassLogger {
         this.options = load();
     }
 
-   public void info(String message) {
-        log(LEVEL.INFO, message);
+    public void info(Object message) {
+        log(LEVEL.INFO, message.toString());
     }
 
-    public void debug(String message) {
-        log(LEVEL.DEBUG, message);
+    public void debug(Object message) {
+        log(LEVEL.DEBUG, message.toString());
     }
 
-    public void warn(String message) {
-        log(LEVEL.WARN, message);
+    public void warn(Object message) {
+        log(LEVEL.WARN, message.toString());
     }
 
-    public void error(String message) {
-        log(LEVEL.ERROR, message);
+    public void error(Object message) {
+        log(LEVEL.ERROR, message.toString());
     }
 
     private void log(LEVEL level, String message) {

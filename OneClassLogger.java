@@ -1,5 +1,3 @@
-package executors;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -11,7 +9,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 /**
- * Author @edoardovignatiFROM_PROC
+ * Author @edoardovignati
  * Code available at https://github.com/EdoardoVignati/OneClassLogger_Java
  */
 

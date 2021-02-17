@@ -1,4 +1,4 @@
-package tools;
+package executors;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 /**
- * Author @edoardovignati
+ * Author @edoardovignatiFROM_PROC
  * Code available at https://github.com/EdoardoVignati/OneClassLogger_Java
  */
 
@@ -77,8 +77,9 @@ public class OneClassLogger {
 
         for (OneClassLoggerOption t : options) {
             if (clazz.getName().matches(t.getMatcher()) && t.getLevel().equals(level.toString())) {
-				if (t.getAppender().equals(APPENDER._DEVNULL.toString()))
+                if (t.getAppender().equals(APPENDER._DEVNULL.toString()))
                     return;
+
                 if (t.getAppender().equals(APPENDER._CONSOLE.toString())) {
                     System.out.println(out);
                     logged = true;

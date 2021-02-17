@@ -24,7 +24,8 @@ public class OneClassLogger {
     // Add here a new custom appender
     private enum APPENDER {
         _CONSOLE,
-        _FILE
+        _FILE,
+        _DEVNULL
     }
 
     // Add here a new custom level
@@ -76,6 +77,8 @@ public class OneClassLogger {
 
         for (OneClassLoggerOption t : options) {
             if (clazz.getName().matches(t.getMatcher()) && t.getLevel().equals(level.toString())) {
+				if (t.getAppender().equals(APPENDER._DEVNULL.toString()))
+                    return;
                 if (t.getAppender().equals(APPENDER._CONSOLE.toString())) {
                     System.out.println(out);
                     logged = true;

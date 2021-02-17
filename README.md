@@ -51,6 +51,7 @@ You can choose from the following appenders:
 
 - _CONSOLE
 - _FILE:/path/to/my/app.log
+- _DEVNULL
 
 Examples:
 

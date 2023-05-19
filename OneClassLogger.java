@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class OneClassLogger {
     private Class clazz;
     private ArrayList<OneClassLoggerOption> options;
-    private static ArrayList<LEVEL> levels;
+    private ArrayList<LEVEL> levels;
     private String optionsPath;
 
     // Add here a new custom appender

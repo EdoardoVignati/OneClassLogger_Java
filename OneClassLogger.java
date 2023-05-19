@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 
 public class OneClassLogger {
-    private Class clazz;
+    private Class<?> clazz;
     private ArrayList<OneClassLoggerOption> options;
     private ArrayList<LEVEL> levels;
     private String optionsPath;
@@ -35,7 +35,7 @@ public class OneClassLogger {
     }
 
     // With or without options file from argument -Dlog
-    public OneClassLogger(Class clazz) {
+    public OneClassLogger(Class<?> clazz) {
         this.clazz = clazz;
         this.levels = new ArrayList<>(Arrays.asList(LEVEL.values()));
         this.optionsPath = System.getProperty("log");
@@ -43,7 +43,7 @@ public class OneClassLogger {
     }
 
     // With options file
-    public OneClassLogger(Class clazz, String optionsFilePath) {
+    public OneClassLogger(Class<?> clazz, String optionsFilePath) {
         this.clazz = clazz;
         this.optionsPath = optionsFilePath;
         this.levels = new ArrayList<>(Arrays.asList(LEVEL.values()));
@@ -66,6 +66,10 @@ public class OneClassLogger {
         log(LEVEL.ERROR, message.toString());
     }
 
+    public void log(String message) {
+    	log(LEVEL.INFO, message.toString());
+    }
+    
     private void log(LEVEL level, String message) {
         StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
         int lineNumber = stackTrace[3].getLineNumber();

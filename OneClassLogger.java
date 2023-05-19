@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 /**
- * Author @edoardovignati
+ * @author edoardovignati
  * Code available at https://github.com/EdoardoVignati/OneClassLogger_Java
  */
 
